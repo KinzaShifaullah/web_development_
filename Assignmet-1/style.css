@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e1e2e4;
+    color: #1f1e1e;
+    margin: 0;
+}
+
+header {
+    background-color: #17296f;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.profile {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin: 5px 20px;
+    padding: 3px;
+    border: 2px solid white;
+}
+
+.heading {
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+}
+
+.heading h1 {
+    font-size: 40px;
+    margin: 5px;
+}
+
+.heading h2 {
+    font-size: 24px;
+    margin: 5px;
+}
+
+.heading p {
+    font-size: 17px;
+    margin: 10px;
+}
+
+#intro {
+    margin-top: 20px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#intro p {
+    display: inline-block;
+    margin: 5px 12px;
+    padding: 7px 10px;
+    background-color: white;
+    color: #1f1e1e;
+    white-space: nowrap;
+}
+
+
+a {
+    color: #132c8e;
+    font-weight: bold;
+}
+nav {
+  clear: both;
+  background-color: white;
+  padding: 15px;
+  margin: 0;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  padding: 5px;
+}
+
+main {
+  width: 80%;
+  margin: 25px auto;
+  padding: 5px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+section h2 {
+    color: #132c8e;
+    font-size: 24px;
+    margin-top: 0;
+    padding-bottom: 5px;
+}
+section p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+#education ul {
+    margin: 10px 0;
+    padding-left: 25px;
+}
+#education li {
+    padding: 5px;
+    margin: 5px;
+}
+#skills ul {
+    margin: 10px 0;
+    padding-left: 25px;
+}
+footer {
+    background-color: #17296f;
+    color: white;
+    padding: 20px;
+    margin-top: 25px;
+    text-align: center;
+    overflow: hidden;
+}
+
+footer h2 {
+    margin: 5px;
+    padding: 5px;
+}
+
+footer p {
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+footer a {
+    color: white;
+}
