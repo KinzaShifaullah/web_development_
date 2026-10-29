@@ -1,0 +1,246 @@
+
+/* Basic page styling */
+body {
+    margin: 0;
+    background-color: #F8F5F0;
+    color: #292520;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar stays at the top */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 6%;
+    background-color: white;
+    border-bottom: 1px solid #E8DFD2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: #292520;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #292520;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #B49463;
+}
+
+/* Shopping bag and menu button */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    color: #292520;
+    text-decoration: none;
+}
+
+.cart:hover {
+    color: #B49463;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #292520;
+    border-radius: 2px;
+}
+
+/* Heading and introductory text */
+.subtitle {
+    color: #967447;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1, h2, h3, .card-title {
+    font-family: Georgia, serif;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.intro-text {
+    color: #806A50;
+}
+
+/* Product cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #E8DFD2;
+    border-radius: 6px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(41, 37, 32, 0.10);
+}
+
+.card-body {
+    padding: 30px 15px;
+}
+
+.card-title {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card-text {
+    color: #967447;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #292520;
+    color: #F8F5F0;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer h3 {
+    color: #B49463;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #D8CFC2;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+footer a {
+    color: #B49463;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .copyright {
+    border-top: 1px solid #51483D;
+    padding-top: 15px;
+    margin-top: 18px;
+    font-size: 12px;
+}
+
+/* Tablet layout */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 767px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+        margin-right: auto;
+    }
+
+    .nav-right {
+        margin-left: 15px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        order: 3;
+        padding-top: 12px;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 5px;
+        border-top: 1px solid #E8DFD2;
+    }
+
+    /* Show menu when clicked */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
