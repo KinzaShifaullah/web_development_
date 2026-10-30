@@ -1,0 +1,718 @@
+
+/* 1. General Styling */
+
+:root {
+    --ivory: #F8F5F0;
+    --cream: #F0E8DD;
+    --dark: #292520;
+    --gold: #B49463;
+    --brown: #806A50;
+    --border: #E8DFD2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--ivory);
+    color: var(--dark);
+}
+
+h1, h2, h3, h4 {
+    font-family: Georgia, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 2. Header and Logo */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+}
+
+.header-inner {
+    position: relative;
+    min-height: 76px;
+}
+
+header nav a {
+    color: var(--dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--gold);
+}
+
+
+/* 3. Hamburger Menu */
+
+.menu-toggle-input {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 1px;
+    height: 1px;
+
+    margin: 0;
+    padding: 0;
+
+    opacity: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+
+    pointer-events: none;
+    border: 0;
+}
+
+.menu-button {
+    display: none;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    background-color: var(--cream);
+}
+
+.menu-toggle-input:focus-visible + .menu-button {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
+
+/* 4. Navigation */
+
+.main-nav a {
+    color: var(--dark);
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--gold);
+}
+
+
+/* 5. Shopping Cart */
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--dark);
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+.cart-link:hover {
+    color: var(--gold);
+}
+
+.cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/* 6. Hero Banner */
+
+.hero-banner {
+    position: relative;
+
+    min-height: 520px;
+
+    background-color: var(--cream);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(248, 241, 231, 0.95) 0%,
+        rgba(248, 241, 231, 0.82) 38%,
+        rgba(248, 241, 231, 0.25) 70%,
+        transparent 100%
+    );
+
+    pointer-events: none;
+}
+
+.hero-banner h1 {
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}
+
+.hero-banner a {
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-banner a:hover {
+    background-color: var(--gold);
+}
+
+
+/* 7. Collection Sections */
+
+.our-collections {
+    width: 100%;
+}
+
+.collection-section {
+    scroll-margin-top: 100px;
+}
+
+#men,
+#women,
+#unisex,
+#collections {
+    scroll-margin-top: 100px;
+}
+
+
+/* 8. Product Cards */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    background-color: #FCFAF7;
+    text-align: center;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    background-color: #F1E8DB;
+    border-color: #CBB18D;
+
+    box-shadow: 0 8px 20px rgba(70, 49, 25, 0.10);
+}
+
+
+/* 9. Product Images */
+
+.product-card > a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--cream);
+}
+
+.product-card > img,
+.product-card > a > img {
+    display: block;
+
+    width: 100%;
+    height: 288px;
+
+    margin: 0;
+    padding: 12px;
+
+    object-fit: contain;
+    object-position: center;
+
+    background-color: var(--cream);
+
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover > img,
+.product-card:hover > a > img {
+    transform: scale(1.025);
+}
+
+
+/* 10. Product Names */
+
+.product-card h4 {
+    width: 100%;
+    min-height: 27px;
+
+    margin: 13px 0 5px;
+    padding: 0 8px;
+
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+
+/* 11. Product Prices */
+
+.product-card p {
+    width: 100%;
+
+    margin: 5px 0 12px;
+    padding: 0 8px;
+
+    color: var(--brown);
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* 12. Add to Cart Buttons */
+
+.product-card button,
+.product-action {
+    display: block;
+
+    width: 145px;
+    max-width: calc(100% - 20px);
+    min-height: 38px;
+
+    margin: 0 auto 14px;
+    padding: 9px 12px;
+
+    border: 1px solid var(--dark);
+    border-radius: 2px;
+
+    background-color: var(--dark);
+    color: var(--ivory);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    text-align: center;
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.product-card button:hover,
+.product-action:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+}
+
+
+/* 13. Product Details Page */
+
+.product-details {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 25px;
+
+    column-gap: 50px;
+    align-items: center;
+}
+
+.product-details img {
+    display: block;
+
+    width: 100%;
+    max-height: 550px;
+
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.product-details h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.product-details h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.product-details label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+/* 14. Quantity Selector */
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+    margin-bottom: 20px;
+
+    border: 1px solid #D6D6D6;
+}
+
+.quantity-selector button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.quantity-selector input {
+    width: 55px;
+    height: 40px;
+
+    text-align: center;
+
+    border: none;
+    outline: none;
+}
+
+.quantity-selector input::-webkit-inner-spin-button,
+.quantity-selector input::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+
+/* 15. Product Details Add to Cart */
+
+.product-details > button {
+    padding: 12px 35px;
+
+    border: 1px solid var(--dark);
+
+    background-color: var(--dark);
+    color: white;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.product-details > button:hover {
+    background-color: var(--gold);
+}
+
+
+/* 16. Footer */
+
+footer a {
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+/* =========================================
+   TABLET AND MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 1023px) {
+
+    .menu-button {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background-color: white;
+        border-bottom: 1px solid var(--border);
+
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.07);
+    }
+
+    #menu-toggle:checked ~ .main-nav {
+        display: block;
+    }
+
+    .main-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+        padding: 6px 20px;
+    }
+
+    .main-nav li {
+        width: 100%;
+        border-bottom: 1px solid #F0E9E0;
+    }
+
+    .main-nav li:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 9px 0;
+    }
+}
+
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+@media (min-width: 1024px) {
+
+    .menu-button {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+
+        position: static;
+        width: auto;
+
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        padding: 0;
+    }
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .hero-banner {
+        min-height: 540px;
+        background-position: 60% center;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(248, 241, 231, 0.96),
+            rgba(248, 241, 231, 0.80) 50%,
+            rgba(248, 241, 231, 0.15)
+        );
+    }
+
+    .hero-banner h1 {
+        max-width: 470px;
+        font-size: 48px;
+    }
+
+    .product-card > img,
+    .product-card > a > img {
+        height: 260px;
+    }
+
+    .product-card h4 {
+        font-size: 15px;
+    }
+
+    .product-details {
+        column-gap: 28px;
+        padding: 24px;
+    }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 767px) {
+
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    .header-inner {
+        min-height: 68px;
+        gap: 8px;
+    }
+
+    /* Hero */
+
+    .hero-banner {
+        min-height: 530px;
+        background-position: 68% center;
+        background-size: cover;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(248, 241, 231, 0.94) 0%,
+            rgba(248, 241, 231, 0.85) 48%,
+            rgba(248, 241, 231, 0.30) 100%
+        );
+    }
+
+    .hero-banner h1 {
+        font-size: clamp(34px, 8vw, 45px);
+        line-height: 1.18;
+    }
+
+    /* Product images */
+
+    .product-card > img,
+    .product-card > a > img {
+        width: 100%;
+        height: 240px;
+
+        padding: 8px;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
+    /* Product names */
+
+    .product-card h4 {
+        min-height: 38px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    /* Product prices */
+
+    .product-card p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    /* Buttons */
+
+    .product-card button,
+    .product-action {
+        width: 118px;
+        min-height: 35px;
+
+        margin-bottom: 11px;
+        padding: 7px 5px;
+
+        font-size: 10px;
+    }
+
+    /* Product details */
+
+    .product-details {
+        grid-template-columns: minmax(0, 1fr);
+
+        gap: 25px;
+
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .product-details img {
+        max-height: 400px;
+    }
+
+    .product-details h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .header-inner {
+        gap: 5px;
+    }
+
+    .product-card > img,
+    .product-card > a > img {
+        height: 215px;
+    }
+
+    .product-card h4 {
+        font-size: 13px;
+    }
+
+    .product-card button,
+    .product-action {
+        width: 108px;
+        font-size: 9px;
+    }
+
+    .hero-banner {
+        min-height: 500px;
+        background-position: 65% center;
+    }
+
+    .hero-banner h1 {
+        font-size: 33px;
+    }
+}
