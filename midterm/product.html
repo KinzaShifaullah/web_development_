@@ -62,83 +62,78 @@
     <main>
 
         <!-- Task 2: Product layout -->
-        <section class="product-details">
+        
+<section class="product-details">
 
-            <!-- Product Image -->
-            <div class="detail-image flex items-center justify-center bg-[#F0E8DD] rounded-lg p-5 md:p-8">
-                <img src="image/01_noir_ember.jpg"
-                     alt="VELORA Noir Ember perfume bottle">
-            </div>
+    <!-- Image and details stay together -->
+    <div class="product-top-grid">
 
-            <!-- Product Information -->
-            <div class="product-info flex flex-col justify-center">
+        <div class="detail-image">
+            <img src="image/01_noir_ember.jpg"
+                 alt="VELORA Noir Ember perfume bottle">
+        </div>
 
-                <p class="text-sm uppercase tracking-[0.25em] text-[#9A7B50] mb-4">
-                    VELORA Signature Collection
-                </p>
+        <div class="product-info">
 
-                <h1 class="text-3xl md:text-4xl font-semibold tracking-wide mb-4">
-                    Noir Ember
-                </h1>
+            <p class="product-subtitle">
+                VELORA SIGNATURE COLLECTION
+            </p>
 
-                <p class="text-xl font-medium text-[#806A50] mb-6">
-                    Rs. 3,490
-                </p>
+            <h1>Noir Ember</h1>
 
-                <label for="quantity-1" class="block text-sm font-semibold mb-3">
-                    Quantity
-                </label>
+            <p class="product-price">Rs. 3,490</p>
 
-                <input type="number"
-                       id="quantity-1"
-                       name="quantity"
-                       min="1"
-                       value="1"
-                       class="w-20 border border-[#CFC2B2] bg-white px-3 py-2 mb-6">
+            <label for="quantity-1">Quantity</label>
 
-                <button type="button"
-                        class="detail-add-button bg-[#292520] text-white px-8 py-4">
-                    Add to Cart
-                </button>
+            <input type="number"
+                   id="quantity-1"
+                   name="quantity"
+                   min="1"
+                   value="1">
 
-            </div>
+            <button type="button" class="detail-add-button">
+                Add to Cart
+            </button>
 
-            <!-- Full-width Product Description -->
-            <div class="product-description">
+        </div>
 
-                <h2>Product Description</h2>
+    </div>
 
-                <p>
-                    Noir Ember is a captivating fragrance inspired by confidence,
-                    sophistication and timeless elegance. Its character brings
-                    together smoky woods and warm amber, creating a deep and
-                    memorable scent for those who appreciate a refined presence.
-                </p>
+    <!-- Description stays below both columns -->
+    <div class="product-description">
 
-                <p>
-                    The opening introduces a warm, expressive impression before
-                    settling into a rich woody character. As the fragrance develops,
-                    amber adds softness and depth, while smoky notes give it a
-                    distinctive finish. The overall profile is designed to feel
-                    elegant without being overpowering.
-                </p>
+        <h2>Product Description</h2>
 
-                <p>
-                    Wear Noir Ember for evening occasions, special gatherings or
-                    whenever you want a confident signature scent. Apply to pulse
-                    points and allow the fragrance to settle naturally. Individual
-                    fragrance experience and longevity may vary depending on skin
-                    and environment.
-                </p>
+        <p>
+            Noir Ember is a captivating fragrance inspired by confidence,
+            sophistication and timeless elegance. Its character brings
+            together smoky woods and warm amber, creating a deep and
+            memorable scent for those who appreciate a refined presence.
+        </p>
 
-                <p>
-                    <strong>Fragrance character:</strong>
-                    warm, woody, smoky and amber-inspired.
-                </p>
+        <p>
+            The opening introduces a warm, expressive impression before
+            settling into a rich woody character. As the fragrance develops,
+            amber adds softness and depth, while smoky notes give it a
+            distinctive finish. The overall profile is designed to feel
+            elegant without being overpowering.
+        </p>
 
-            </div>
+        <p>
+            Wear Noir Ember for evening occasions, special gatherings or
+            whenever you want a confident signature scent. Apply to pulse
+            points and allow the fragrance to settle naturally.
+        </p>
 
-        </section>
+        <p>
+            <strong>Fragrance character:</strong>
+            warm, woody, smoky and amber-inspired.
+        </p>
+
+    </div>
+
+</section>
+
 
         <!-- Continue Shopping -->
         <section class="text-center px-5 pb-14">

@@ -1,4 +1,6 @@
-/* General Styling */
+
+/* General styling */
+
 :root {
     --ivory: #F8F5F0;
     --cream: #F0E8DD;
@@ -33,7 +35,8 @@ a {
     text-decoration: none;
 }
 
-/* Header and Navigation */
+/* Header and navigation */
+
 header {
     position: sticky;
     top: 0;
@@ -57,7 +60,8 @@ header nav a:hover,
     color: var(--gold);
 }
 
-/* Hamburger Menu */
+/* Hamburger menu */
+
 .menu-toggle-input {
     position: absolute;
     width: 1px;
@@ -83,7 +87,8 @@ header nav a:hover,
     outline-offset: 3px;
 }
 
-/* Shopping Cart */
+/* Shopping cart */
+
 .cart-link {
     display: flex;
     align-items: center;
@@ -103,7 +108,8 @@ header nav a:hover,
     right: 0;
 }
 
-/* Hero Banner */
+/* Hero banner */
+
 .hero-banner {
     position: relative;
     min-height: 520px;
@@ -142,7 +148,8 @@ header nav a:hover,
     background-color: var(--gold);
 }
 
-/* Collection Sections */
+/* Collection sections */
+
 .our-collections {
     width: 100%;
 }
@@ -155,7 +162,8 @@ header nav a:hover,
     scroll-margin-top: 100px;
 }
 
-/* Product Cards */
+/* Product cards */
+
 .product-card {
     display: flex;
     flex-direction: column;
@@ -181,7 +189,8 @@ header nav a:hover,
     box-shadow: 0 8px 20px rgba(70, 49, 25, 0.10);
 }
 
-/* Product Images */
+/* Product images */
+
 .product-card > a {
     display: block;
     width: 100%;
@@ -207,7 +216,8 @@ header nav a:hover,
     transform: scale(1.025);
 }
 
-/* Product Names */
+/* Product names */
+
 .product-card h4 {
     width: 100%;
     min-height: 27px;
@@ -219,7 +229,8 @@ header nav a:hover,
     text-align: center;
 }
 
-/* Product Prices */
+/* Product prices */
+
 .product-card p {
     width: 100%;
     margin: 5px 0 12px;
@@ -229,7 +240,8 @@ header nav a:hover,
     text-align: center;
 }
 
-/* Add to Cart Buttons */
+/* Add to Cart buttons */
+
 .product-card button,
 .product-action {
     display: block;
@@ -259,6 +271,7 @@ header nav a:hover,
 }
 
 /* Footer */
+
 footer a {
     text-decoration: underline;
     transition: color 0.3s ease;
@@ -268,7 +281,8 @@ footer a:hover {
     color: white;
 }
 
-/* TASK 1: CSS-only Category Filter */
+/* Task 1: Category filter */
+
 .category-filter {
     margin: 0 0 38px;
     text-align: center;
@@ -323,6 +337,7 @@ footer a:hover {
 }
 
 /* Show only the selected category */
+
 body:has(#filter-men:checked) #women,
 body:has(#filter-men:checked) #unisex {
     display: none !important;
@@ -338,75 +353,139 @@ body:has(#filter-unisex:checked) #women {
     display: none !important;
 }
 
-/* TASK 2: Product Page Grid Layout */
+/* Task 2: Product page layout */
+
 .product-details {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-areas:
-        "image details"
-        "description description";
-    align-items: start;
-    gap: 34px 48px;
+        "top"
+        "description";
     max-width: 1150px;
     margin: 42px auto;
     padding: 25px;
+    gap: 35px;
 }
 
-/* Product Image Area */
-.detail-image {
-    grid-area: image;
+/* Image and information stay in one grid */
+
+.product-top-grid {
+    grid-area: top;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "image details";
+    align-items: start;
+    gap: 40px;
     min-width: 0;
 }
 
-.product-details .detail-image img {
+/* Product image */
+
+.detail-image {
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    padding: 25px;
+    background-color: var(--cream);
+    border-radius: 8px;
+}
+
+.detail-image img {
     display: block;
     width: 100%;
     max-height: 540px;
     object-fit: contain;
     object-position: center;
+}
+
+/* Product information */
+
+.product-info {
+    grid-area: details;
+    align-self: start;
+    min-width: 0;
+    padding: 22px;
+    background-color: var(--ivory);
+    border: 1px solid var(--border);
     border-radius: 8px;
 }
 
-/* Product Information Area */
-.product-info {
-    grid-area: details;
-    min-width: 0;
-    align-self: start;
+.product-info h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 15px 0;
 }
 
-.product-info h1 {
-    line-height: 1.2;
+.product-info h2 {
+    font-size: 24px;
+}
+
+.product-info p {
+    line-height: 1.8;
+}
+
+.product-subtitle {
+    color: var(--brown);
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.product-price {
+    color: var(--brown);
+    font-size: 20px;
 }
 
 .product-info label {
     display: block;
-    margin: 20px 0 10px;
+    margin: 22px 0 10px;
     font-weight: 600;
 }
 
-/* Sticky Details */
+.product-info input {
+    width: 80px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    background-color: white;
+}
+
+/* Sticky product information */
+
 @media (min-width: 636px) {
     .product-info {
         position: sticky;
         top: 106px;
+        z-index: 10;
+        background-color: var(--ivory);
+        box-shadow: 0 5px 18px rgba(41, 37, 32, 0.08);
     }
 }
 
-/* Add to Cart on Product Page */
+/* Product page button */
+
 .detail-add-button {
-    width: fit-content;
-    min-width: 190px;
+    display: block;
+    width: 190px;
+    max-width: 100%;
+    margin-top: 24px;
+    padding: 16px;
+    border: 1px solid var(--dark);
+    background-color: var(--dark);
+    color: white;
     cursor: pointer;
     transition: background-color 0.25s ease;
 }
 
 .detail-add-button:hover {
     background-color: var(--gold);
+    border-color: var(--gold);
 }
 
-/* Full Width Description */
+/* Product description */
+
 .product-description {
     grid-area: description;
+    width: 100%;
     min-width: 0;
     line-height: 1.85;
 }
@@ -422,7 +501,8 @@ body:has(#filter-unisex:checked) #women {
     line-height: 1.85;
 }
 
-/* Tablet and Mobile Navigation */
+/* Tablet and mobile navigation */
+
 @media (max-width: 1023px) {
 
     .menu-button {
@@ -467,7 +547,8 @@ body:has(#filter-unisex:checked) #women {
     }
 }
 
-/* Desktop Navigation */
+/* Desktop navigation */
+
 @media (min-width: 1024px) {
 
     .menu-button {
@@ -491,7 +572,8 @@ body:has(#filter-unisex:checked) #women {
     }
 }
 
-/* Tablet Responsive */
+/* Tablet layout */
+
 @media (min-width: 768px) and (max-width: 1023px) {
 
     .hero-banner {
@@ -521,9 +603,18 @@ body:has(#filter-unisex:checked) #women {
     .product-card h4 {
         font-size: 15px;
     }
+
+    .product-top-grid {
+        gap: 25px;
+    }
+
+    .product-info {
+        padding: 18px;
+    }
 }
 
-/* Mobile Responsive */
+/* Mobile layout */
+
 @media (max-width: 767px) {
 
     html {
@@ -584,25 +675,34 @@ body:has(#filter-unisex:checked) #women {
     }
 }
 
-/* Task 2: Below 636px, stack image, details and description */
+/* Task 2: Below 636px, stack product sections */
+
 @media (max-width: 635px) {
 
     .product-details {
+        margin: 20px auto;
+        padding: 18px;
+        gap: 24px;
+    }
+
+    .product-top-grid {
         grid-template-columns: minmax(0, 1fr);
         grid-template-areas:
             "image"
-            "details"
-            "description";
-        gap: 24px;
-        margin: 20px auto;
-        padding: 18px;
+            "details";
+        gap: 25px;
     }
 
     .product-info {
         position: static;
+        padding: 20px;
     }
 
-    .product-details .detail-image img {
+    .product-info h1 {
+        font-size: 30px;
+    }
+
+    .detail-image img {
         max-height: 390px;
     }
 
@@ -611,7 +711,8 @@ body:has(#filter-unisex:checked) #women {
     }
 }
 
-/* Small Mobile */
+/* Small mobile screens */
+
 @media (max-width: 380px) {
 
     .header-inner {
@@ -643,7 +744,8 @@ body:has(#filter-unisex:checked) #women {
     }
 }
 
-/* Task 3: Search and Sort */
+/* Task 3: Search and sort */
+
 .search-sort-container {
     display: flex;
     justify-content: center;
@@ -686,7 +788,8 @@ body:has(#filter-unisex:checked) #women {
     border-color: var(--gold);
 }
 
-/* Premium Label */
+/* Premium label */
+
 .premium-label {
     display: inline-block;
     align-self: center;
@@ -701,7 +804,8 @@ body:has(#filter-unisex:checked) #women {
     text-transform: uppercase;
 }
 
-/* No Products Message */
+/* No products message */
+
 .no-products {
     padding: 35px 15px;
     text-align: center;
@@ -709,6 +813,8 @@ body:has(#filter-unisex:checked) #women {
     font-family: Georgia, serif;
     font-size: 22px;
 }
+
+/* Search controls on small screens */
 
 @media (max-width: 480px) {
 
@@ -721,5 +827,4 @@ body:has(#filter-unisex:checked) #women {
         width: 100%;
         max-width: 320px;
     }
-
 }
