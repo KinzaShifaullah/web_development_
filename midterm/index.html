@@ -1,1 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELORA | The Art of Fragrance</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
 
+<body class="bg-[#F8F5F0] text-[#292520]">
+
+    <header class="sticky top-0 z-50 bg-white border-b border-[#E8DFD2]">
+        <div class="header-inner max-w-7xl mx-auto px-5 md:px-8 py-3 flex items-center justify-between gap-4">
+
+            <a href="index.html" class="flex items-center gap-3 no-underline text-[#292520] shrink-0">
+                <img src="image/velora_golden_ribbon_monogram.jpg"
+                     alt="VELORA Logo"
+                     class="w-11 h-11 md:w-14 md:h-14 rounded-full object-cover">
+                <span class="text-2xl md:text-3xl font-bold tracking-widest">VELORA</span>
+            </a>
+
+            <input type="checkbox" id="menu-toggle"
+                   class="menu-toggle-input" aria-label="Toggle navigation">
+
+            <label for="menu-toggle"
+                   class="menu-button lg:hidden cursor-pointer p-2 hover:bg-[#F0E8DD] rounded"
+                   aria-label="Toggle navigation">
+                <svg class="w-7 h-7" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M4 7h16M4 12h16M4 17h16"></path>
+                </svg>
+            </label>
+
+            <nav aria-label="Main navigation"
+                 class="main-nav absolute top-full left-0 w-full bg-white border-b border-[#E8DFD2] shadow-md lg:shadow-none lg:border-0 lg:bg-transparent lg:static lg:w-auto">
+                <ul class="flex flex-col lg:flex-row lg:items-center gap-1 lg:gap-6 px-5 py-4 lg:p-0 text-sm font-medium">
+                    <li><a href="index.html" class="block py-2">Home</a></li>
+                    <li><a href="#men" class="block py-2">Men</a></li>
+                    <li><a href="#women" class="block py-2">Women</a></li>
+                    <li><a href="#unisex" class="block py-2">Unisex</a></li>
+                    <li><a href="#collections" class="block py-2">Shop All</a></li>
+                </ul>
+            </nav>
+
+            <a href="#cart" aria-label="Shopping cart, 0 items"
+               class="cart-link relative shrink-0 p-2 flex items-center gap-1">
+                <svg class="w-6 h-6 md:w-7 md:h-7" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M5 8h14l1 12H4L5 8Z"></path>
+                    <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+                </svg>
+                <span class="text-sm font-medium">Cart</span>
+                <span class="cart-count absolute top-0 right-0 w-4 h-4 rounded-full bg-[#B49463] text-white text-[10px] flex items-center justify-center">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="home"
+                 class="hero-banner relative min-h-[520px] md:min-h-[620px] flex items-center overflow-hidden"
+                 style="background-image: url('image/velora_hero.png');">
+
+            <div class="hero-overlay absolute inset-0"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 py-16">
+                <p class="text-xs md:text-sm uppercase tracking-[0.3em] text-[#967447] mb-5">
+                    The Art of Fragrance
+                </p>
+
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight max-w-lg mb-6">
+                    Discover Your
+                    <span class="block">Signature Scent</span>
+                </h1>
+
+                <p class="text-base md:text-lg leading-8 text-[#62594F] max-w-md mb-8">
+                    Beyond fragrance, an expression of elegance and a reflection of you.
+                </p>
+
+                <a href="#collections"
+                   class="inline-block bg-[#292520] text-white px-8 py-3.5 hero-button">
+                    Explore Collection
+                </a>
+            </div>
+        </section>
+
+        <section id="collections"
+                 class="our-collections max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-16">
+
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-semibold">Our Collections</h2>
+                <p class="text-[#806A50] mt-4 max-w-xl mx-auto leading-7">
+                    Explore distinctive fragrances designed for every personality and occasion.
+                </p>
+            </div>
+
+            <!-- Task 1: CSS-only category filter -->
+            <div class="category-filter" aria-label="Filter products by category">
+                <h3>Filter By Category</h3>
+
+                <div class="filter-options">
+                    <input type="radio" name="category" id="filter-all" checked>
+                    <label for="filter-all">All</label>
+
+                    <input type="radio" name="category" id="filter-men">
+                    <label for="filter-men">Men</label>
+
+                    <input type="radio" name="category" id="filter-women">
+                    <label for="filter-women">Women</label>
+
+                    <input type="radio" name="category" id="filter-unisex">
+                    <label for="filter-unisex">Unisex</label>
+                </div>
+            </div>
+
+            <!-- Men's Collection -->
+            <section id="men" class="collection-section mb-16">
+                <h3 class="text-2xl md:text-3xl font-semibold mb-7">
+                    Men's Fragrances
+                </h3>
+
+                <div class="product-grid grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-7">
+
+                    <article class="product-card">
+                        <a href="product.html" class="product-image-link">
+                            <img src="image/01_noir_ember.jpg" alt="VELORA Noir Ember perfume">
+                        </a>
+                        <h4>Noir Ember</h4>
+                        <p>Rs. 3,490</p>
+                        <button type="button" class="product-action">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="image/02_steel_oud.jpg" alt="VELORA Steel Oud perfume">
+                        <h4>Steel Oud</h4>
+                        <p>Rs. 4,250</p>
+                        <button type="button" class="product-action">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="image/03_midnight_vetiver.jpg" alt="VELORA Midnight Vetiver perfume">
+                        <h4>Midnight Vetiver</h4>
+                        <p>Rs. 3,850</p>
+                        <button type="button" class="product-action">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="image/04_royal_intense.jpg" alt="VELORA Royal Intense perfume">
+                        <h4>Royal Intense</h4>
+                        <p>Rs. 5,290</p>
+                        <button type="button" class="product-action">Add to Cart</button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Women's Collection -->
+            <section id="women" class="collection-section mb-16">
+                <h3 class="text-2xl md:text-3xl font-semibold mb-7">
+                    Women's Fragrances
+                </h3>
+
+                <div class="product-grid grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-7">
+
+                    <article class="product-card">
+                        <img src="image/06_rose_elan.jpg" alt="VELORA Rose Élan perfume">
+                        <h4>Rose Élan</h4>
+                        <p>Rs. 3,790</p>
+                        <button type="button" class="product-action">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="image/07_velvet_bloom.jpg" alt="VELORA Velvet Bloom perfume">
+                        <h4>Velvet Bloom</h4>
+                        <p>Rs. 4,190</p>
+                        <button type="button" class="product-action">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="image/09_blush_etoile.jpg" alt="VELORA Blush Étoile perfume">
+                        <h4>Blush Étoile</h4>
+                        <p>Rs. 3,550</p>
+                        <button type="button" class="product-action">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="image/10_lumiere.jpg" alt="VELORA Lumière perfume">
+                        <h4>Lumière</h4>
+                        <p>Rs. 4,890</p>
+                        <button type="button" class="product-action">Add to Cart</button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Unisex Collection -->
+            <section id="unisex" class="collection-section mb-8">
+                <h3 class="text-2xl md:text-3xl font-semibold mb-7">
+                    Unisex Fragrances
+                </h3>
+
+                <div class="product-grid grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-7">
+
+                    <article class="product-card">
+                        <img src="image/05_ocean_noir.jpg" alt="VELORA Ocean Noir perfume">
+                        <h4>Ocean Noir</h4>
+                        <p>Rs. 3,690</p>
+                        <button type="button" class="product-action">Add to Cart</button>
+                    </article>
+
+                    <article class="product-card">
+                        <img src="image/08_amber_veil.jpg" alt="VELORA Amber Veil perfume">
+                        <h4>Amber Veil</h4>
+                        <p>Rs. 4,590</p>
+                        <button type="button" class="product-action">Add to Cart</button>
+                    </article>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="bg-[#292520] text-[#F8F5F0] px-6 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9">
+
+            <div>
+                <h2 class="text-2xl font-semibold tracking-widest mb-3">VELORA</h2>
+                <p class="text-sm text-[#D8C5AC] mb-4">The Art of Fragrance</p>
+                <p class="text-sm text-[#C7B9A6] leading-7">
+                    Discover fragrances that reflect your personality and make every moment memorable.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Explore</h3>
+                <ul class="space-y-3 text-sm text-[#D8C5AC]">
+                    <li><a href="#collections">Shop All</a></li>
+                    <li><a href="#men">Men's Fragrances</a></li>
+                    <li><a href="#women">Women's Fragrances</a></li>
+                    <li><a href="#unisex">Unisex Fragrances</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Customer Care</h3>
+                <ul class="space-y-3 text-sm text-[#D8C5AC]">
+                    <li>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kinzashifaullah%40gmail.com&su=VELORA%20Customer%20Inquiry"
+                           target="_blank" rel="noopener noreferrer">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kinzashifaullah%40gmail.com&su=VELORA%20Help%20and%20Support"
+                           target="_blank" rel="noopener noreferrer">Help &amp; Support</a>
+                    </li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Get in Touch</h3>
+                <p class="text-sm text-[#C7B9A6] leading-7 mb-4">
+                    Have a question about our fragrances? We would love to hear from you.
+                </p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kinzashifaullah%40gmail.com&su=VELORA%20Customer%20Inquiry"
+                   target="_blank" rel="noopener noreferrer"
+                   class="text-sm text-[#D8C5AC] underline">
+                    kinzashifaullah@gmail.com
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-[#51483D] mt-10 pt-5 text-center">
+            <p class="text-xs text-[#C7B9A6]">
+                &copy; 2026 VELORA. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
