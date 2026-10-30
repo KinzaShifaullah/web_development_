@@ -114,6 +114,21 @@
                     <label for="filter-unisex">Unisex</label>
                 </div>
             </div>
+    <!-- Task 3: Search and Sort -->
+<div class="search-sort-container">
+
+    <input
+        type="search"
+        id="product-search"
+        placeholder="Search fragrances..."
+        aria-label="Search products"
+    >
+
+    <button type="button" id="sort-price">
+        Sort by Price: Low to High
+    </button>
+
+</div>
 
             <!-- Men's Collection -->
             <section id="men" class="collection-section mb-16">
@@ -216,6 +231,9 @@
                     </article>
                 </div>
             </section>
+            <p id="no-products" class="no-products" hidden>
+    No products found
+</p>
 
         </section>
     </main>
