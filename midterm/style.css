@@ -642,3 +642,84 @@ body:has(#filter-unisex:checked) #women {
         font-size: 33px;
     }
 }
+
+/* Task 3: Search and Sort */
+.search-sort-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 auto 35px;
+    padding: 0 10px;
+}
+
+#product-search {
+    width: 280px;
+    max-width: 100%;
+    padding: 11px 15px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: white;
+    color: var(--dark);
+    font-size: 14px;
+    outline: none;
+}
+
+#product-search:focus {
+    border-color: var(--gold);
+}
+
+#sort-price {
+    padding: 11px 18px;
+    border: 1px solid var(--dark);
+    border-radius: 3px;
+    background: var(--dark);
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sort-price:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+/* Premium Label */
+.premium-label {
+    display: inline-block;
+    align-self: center;
+    margin: 0 auto 12px;
+    padding: 5px 12px;
+    border-radius: 2px;
+    background: var(--gold);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* No Products Message */
+.no-products {
+    padding: 35px 15px;
+    text-align: center;
+    color: var(--brown);
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+@media (max-width: 480px) {
+
+    .search-sort-container {
+        flex-direction: column;
+    }
+
+    #product-search,
+    #sort-price {
+        width: 100%;
+        max-width: 320px;
+    }
+
+}
